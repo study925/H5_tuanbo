@@ -23,16 +23,26 @@
       @media (max-width: 768px) {
         body {
           font-size: 16px;
-          line-height: 1.6;
+          line-height: 1.7;
+          -webkit-text-size-adjust: 100%;
         }
         /* 确保触摸目标至少44x44px */
-        button, a {
+        button, a, [role="button"] {
           min-height: 44px;
           min-width: 44px;
+          touch-action: manipulation;
+        }
+        /* 优化文本选择 */
+        * {
+          -webkit-tap-highlight-color: rgba(236, 72, 153, 0.2);
+        }
+        /* 优化滚动性能 */
+        * {
+          -webkit-overflow-scrolling: touch;
         }
       }
     </style>
-    <script type="module" crossorigin src="/H5_tuanbo/assets/index-JFmzPrvk.js"></script>
+    <script type="module" crossorigin src="/H5_tuanbo/assets/index-D3XvnK1X.js"></script>
   </head>
   <body>
     <div id="root"></div>
